@@ -1,34 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Route, Switch } from 'wouter';
+// import HeaderWelcome from "./components/HeaderWelcome";
+// import HeaderQuiz from "./components/HeaderQuiz";
+// import HeaderMenu from "./components/HeaderMenu";
+import HowItWorks from './components/HowItWorks';
+import Pricing from './components/Pricing';
+import LogIn from './components/LogIn';
+import SignUp from './components/SignUp';
+import FirstScreen from './components/FirstScreen'
+import WelcomeModal from './components/WelcomeModal'
+import GenreSelection from './components/GenreSelection';
+import BookAuthorSelection from './components/BookAuthorSelection';
+import InterestSelection from './components/InterestSelection';
+import Header from './components/Header';
+import GreetingsModal from './components/GreetingsModal';
+import Discovering from './components/Discovering';
+import BookSwipe from './components/BookSwipe';
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="App">
+    {/* Header for Welcome section */}
+    <Header type="welcome" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
+
+    <Switch>
+      <Route path="/quiz">
+        {/* Header for Quiz section */}
+        <Header type="quiz" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
+        <GenreSelection />
+      </Route>
+      <Route path="/menu">
+        {/* Header for Menu section */}
+        <Header type="menu" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
+        <Pricing />
+      </Route>
+      <Route path="/">
+        {/* Default Header for Welcome section */}
+        <Header type="welcome" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
+        <FirstScreen />
+      </Route>
+    </Switch>
+  
+    <main>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Route path="/firstscreen" component={FirstScreen} />
+        <Route path="/how-it-works" component={HowItWorks} />
+        <Route path="/pricing" component={Pricing} />
+        <Route path="/login" component={LogIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/welcomemodal" component={WelcomeModal} />
+        <Route path="/genres" component={GenreSelection} />
+        <Route path="/books-authors-selection" component={BookAuthorSelection} />
+        <Route path="/interests" component={InterestSelection} />
+        <Route path="/greetings" component={GreetingsModal} />
+        <Switch>
+      <Route path="/discovering" component={Discovering} />
+      <Route path="/bookswipe" component={BookSwipe} />
+    </Switch>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
+    
+    {/* <HeaderQuiz /> */}
+    {/* <HeaderMenu /> */}
+    </div>
   )
 }
 
