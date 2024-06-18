@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
-import HeaderMenu from './HeaderMenu';
 
 const books = [
     {
@@ -18,22 +16,36 @@ const books = [
             author: "F. Scott Fitzgerald was an American novelist, best known for his novel The Great Gatsby. His works illustrate the Jazz Age and the American Dream...",
         },
     },
-// {
-//     img: "src/images/HarryPotter.jpeg",
-//     title: "Harry Potter",
-//     author: "J.K. Rowling",
-//     match: "92%",
-//     tags: ["Fantasy", "Magic", "Adventure"],
-//     rating: 5,
-//     reviews: 2568,
-//     description: "Harry Potter and the Sorcerer's Stone is the first book in the Harry Potter series. It follows the story of a young wizard named Harry Potter as he discovers his magical...",
-//     additionalDetails: {
-//         pages: "320",
-//         language: "English",
-//         author: "J.K. Rowling is a British author, best known for writing the Harry Potter series. Her books have become a global phenomenon and have been adapted into successful films...",
-//     },
-// },
-
+    {
+        img: "src/images/HarryPotter.jpeg",
+        title: "Harry Potter",
+        author: "J.K. Rowling",
+        match: "92%",
+        tags: ["Fantasy", "Magic", "Adventure"],
+        rating: 5,
+        reviews: 2568,
+        description: "Harry Potter and the Sorcerer's Stone is the first book in the Harry Potter series. It follows the story of a young wizard named Harry Potter as he discovers his magical...",
+        additionalDetails: {
+            pages: "320",
+            language: "English",
+            author: "J.K. Rowling is a British author, best known for writing the Harry Potter series. Her books have become a global phenomenon and have been adapted into successful films...",
+        },
+    },
+    {
+        img: "src/images/1984Cover.webp",
+        title: "1984",
+        author: "George Orwell",
+        match: "78%",
+        tags: ["Dystopian", "Politics", "Totalitarianism"],
+        rating: 4,
+        reviews: 987,
+        description: "1984 is a dystopian novel set in a totalitarian society ruled by the Party and its leader, Big Brother. The story follows Winston Smith, a low-ranking member of the Party...",
+        additionalDetails: {
+            pages: "328",
+            language: "English",
+            author: "George Orwell was an English novelist, essayist, and critic, best known for his novels Animal Farm and 1984. His works are known for their social and political themes...",
+        },
+    }
 ];
 
 const BookSwipe = () => {
@@ -42,6 +54,10 @@ const BookSwipe = () => {
     const [likedBooks, setLikedBooks] = useState([]);
     const [dislikedBooks, setDislikedBooks] = useState([]);
     const [library, setLibrary] = useState([]);
+
+    console.log(likedBooks);
+    console.log(dislikedBooks);
+    console.log(currentIndex)
 
     const toggleExpand = (index) => {
         setExpandedBooks(prevState => ({
@@ -68,15 +84,13 @@ const BookSwipe = () => {
     };
 
     const moveToNextBook = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % books.length);
+        setCurrentIndex((prevIndex) => (prevIndex + 1));
     };
 
     const cardClasses = "w-[500px] relative flex flex-col items-center justify-center bg-white rounded-3xl shadow border border-stone";
 
     return (
         <>
-        <Link href="/menu"></Link>
-        <HeaderMenu />
             <div className="flex flex-col items-center justify-center -mt-1">
                 <div className="text-center text-black text-4xl font-semibold font-['Poppins'] mb-5">
                     Discover Books
@@ -85,7 +99,7 @@ const BookSwipe = () => {
         <div className="h-screen">
 
                 {books.map((book, index) => (
-                    <div key={index} className={`${cardClasses} ${expandedBooks[index] ? "h-[930px]" : "h-[775px]"}`}>
+                    <div key={index} className={`${cardClasses} ${expandedBooks[index] ? "h-[930px]" : "h-[775px]"} ${index === currentIndex ? 'block' : 'hidden'}`}>
                         <div className="justify-center items-center inline-flex w-[430px] h-[390px] top-[45px] absolute">
                             <img src={book.img} className="rounded-2xl"/>
                             <div className="top-[390px] absolute px-4 py-1 bg-white rounded-xl border-2 border-yellow justify-center items-center gap-2.5 inline-flex">
@@ -93,7 +107,7 @@ const BookSwipe = () => {
                             </div>
                             <div className="flex flex-col items-center justify-center gap-2 w-[460px] top-[442px] absolute">
                                 <div className="flex flex-col gap-1">
-                                    <div className="text-center text-black text-3xl font-semibold font-['Poppins'] mt-1">{book.title}</div>
+                                    <div className="text-center text-black text-3xl font-semibold font-['Poppins'] mt-1">&quot;{book.title}&quot;</div>
                                     <div className="text-center text-black text-lg font-medium font-['Lora']">by {book.author}</div>
                                 </div>
                                 <div className="justify-start items-start gap-2.5 inline-flex">

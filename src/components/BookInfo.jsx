@@ -15,6 +15,7 @@ const books = [
         authorDescription: "F. Scott Fitzgerald was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century. His works illustrate the Jazz Age and the American Dream. His most famous novel, The Great Gatsby, remains a defining work of American literature.",
         rating: 4,
         reviews: 1345,
+        id: "the_title_gatsby",
     },
 ]
 
@@ -38,18 +39,18 @@ const reviews = [
 
 const related = [
     {
-        coverImage: "src/images/HarryPotter.jpeg",
+        coverImage: "src/images/1984Cover.webp",
         title: "1984",
         author: "George Orwell",
     },
     {
-        coverImage: "src/images/GatsbyCover.webp", 
+        coverImage: "src/images/MockingbirdCover.webp", 
         title: "To Kill a Mockingbird",
         author: "Harper Lee",
     },
     {
         coverImage: "src/images/HarryPotter.jpeg",
-        title: "Animal Farm",
+        title: "Harry Potter",
         author: "George Orwell",
     }
 ]
@@ -59,7 +60,7 @@ const BookInfo = () => {
     return (
         <>
             <Link to="/library" className="pt-3 flex items-center gap-1 ml-20 text-black text-xl font-medium  font-['Poppins'] hover:text-red active:text-blue">
-                    <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="24" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.1875 9H3.375M7.3125 4.5L2.8125 9L7.3125 13.5" stroke="#151515" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}/>
                     </svg>
                     Back
@@ -117,7 +118,7 @@ const BookInfo = () => {
 
                             <div className="flex flex-col gap-2 justify-start items-start">
                             <div className="text-center text-black text-xl font-semibold font-['Poppins']">Where to Buy: </div> 
-                            <div className="flex flex-row gap-7">
+                            <div className="flex flex-row gap-8">
                                 {book.purchase.map((purchase, i) => (
                                 <div key={i}>
                                 <button className="text-center text-blue text-xl font-semibold font-['Poppins'] underline hover:text-red active:text-yellow"> {purchase} </button>

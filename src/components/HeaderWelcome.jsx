@@ -5,15 +5,15 @@ const HeaderWelcome = () => {
     <>
     <div className="w-full h-24 bg-stone flex items-center justify-between px-20 relative">
       <div className="flex items-center">
-      <Link href="/firstscreen"className="left-[80px] top-[12px] absolute">
+      <Link href="/firstscreen" className="left-[80px] top-[12px] absolute">
           <img className="w-[108px] h-[52px]" src="src/images/logo-book.png" alt="BookMatch Logo" />
           <div className="text-center text-black text-lg font-semibold font-['Poppins']">BookMatch</div>
           </Link>
         </div>
       <div className="flex items-center gap-12">
         <div className="flex items-center gap-8">
-        <Link href="/how-it-works" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">How it works</Link>
-        <Link href="/pricing" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Pricing</Link>
+        <button className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">How it works</button>
+        <button className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Pricing</button>
         </div>
         <div className="flex items-center gap-6">
         <Link href="/login" className="text-blue text-xl font-semibold font-['Poppins'] hover:text-red active:text-red">Log In</Link>

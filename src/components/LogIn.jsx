@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { Link } from 'wouter';
-import HeaderWelcome from './HeaderWelcome';
 
 const LogIn = () => {
   const [email, setEmail] = useState('');
@@ -31,9 +30,6 @@ const validatePassword = (event) => {
 
   return (
     <>
-    <Link href="/welcome"></Link>
-      <HeaderWelcome />
-
     <div className="w-full h-screen flex items-center justify-center bg-stone">
       <div className="w-[760px] h-auto bg-white rounded-3xl border border-beige p-6 absolute top-[110px]">
       <div className="text-center mt-4 text-red text-4xl font-medium font-['Poppins']">Log In</div>
@@ -65,7 +61,7 @@ const validatePassword = (event) => {
             <input
               id="email"
               type="email"
-              className="w-full h-14 bg-stone-100 rounded-lg border border-black px-4 text-base font-normal font-['Lora'] placeholder-neutral-900/50 bg-stone focus:bg-white focus:outline-none focus:border-blue focus:ring-1 focus:blue 
+              className="w-full h-14 rounded-lg border border-black px-4 text-base font-normal font-['Lora'] placeholder-neutral-900/50 bg-stone focus:bg-white focus:outline-none focus:border-blue focus:ring-1
               disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
               invalid:border-red invalid:text-red
               focus:invalid:border-red focus:invalid:ring-red"
@@ -82,7 +78,7 @@ const validatePassword = (event) => {
               id="password"
               type="password"
               minLength="8"
-              className="w-full h-14 bg-stone-100 rounded-lg border border-black px-4 text-base font-normal font-['Lora'] placeholder-neutral-900/50  bg-stone focus:bg-white focus:outline-none focus:border-blue focus:ring-1 focus:blue 
+              className="w-full h-14mrounded-lg border border-black px-4 text-base font-normal font-['Lora'] placeholder-neutral-900/50  bg-stone focus:bg-white focus:outline-none focus:border-blue focus:ring-1
               disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
               invalid:border-red invalid:text-red
               focus:invalid:border-red focus:invalid:ring-red"

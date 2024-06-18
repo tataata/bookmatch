@@ -109,11 +109,11 @@ const MyLibrary = () => {
         {
             coverImage: "src/images/HarryPotter.jpeg",
             match: 92,
-            title: "The Art of War",
-            author: "Sun Tzu",
-            tags: ["Military Strategy"],
-            reviews: 567,
-            description: "A classic guide to military strategy and tactics. This timeless book offers valuable insights into the art of warfare, including principles of leadership, tactics, and the importance of..."
+            title: "Harry Potter",
+            author: "J.K. Rowling",
+            tags: ["Fantasy", "Fiction"],
+            reviews: 2567,
+            description: "A captivating fantasy series that follows the life of a young wizard, Harry Potter, as he attends Hogwarts School of Witchcraft and Wizardry. The series explores themes of friendship, courage, and the battle between good and evil..."
         },
         {
             coverImage: "src/images/GatsbyCover.webp",
@@ -167,6 +167,7 @@ const MyLibrary = () => {
             author: "J.D. Salinger",
             coverImage: "bg-beige"
         },
+
     ];
 
     const [displayedBooks, setDisplayedBooks] = useState(14);
@@ -184,8 +185,8 @@ const MyLibrary = () => {
 
     return (
         <>
-         <Link to="/bookswipe" className="pt-3 flex items-center gap-1 ml-20 text-black text-xl font-medium  font-['Poppins'] hover:text-red active:text-blue">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <Link to="/bookswipe" className="pt-3 flex items-center gap-1 ml-20 text-black text-xl font-medium font-['Poppins'] hover:text-red active:text-blue">
+                <svg width="24" height="24" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.1875 9H3.375M7.3125 4.5L2.8125 9L7.3125 13.5" stroke="#151515" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}/>
                 </svg>
                 Back
@@ -312,7 +313,7 @@ const MyLibrary = () => {
                         {mores.map((more) => (
                             <Link key={more.title} to={`/bookinfo/${more.title}`}>
                             <div className={`flex flex-col items-right justify-start gap-2`}>
-                                <div className={`w-[145px] h-[160px] ${more.coverImage} rounded`}></div>
+                                <div className={`w-[145px] h-[166px] ${more.coverImage} rounded`}></div>
                                 <div className="text-center text-black text-base font-semibold font-['Poppins'] leading-tight mt-1 -mb-1 w-[145px]  hover:text-red active:text-yellow">
                                     &quot;{more.title}&quot;
                                 </div>
