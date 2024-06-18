@@ -106,7 +106,7 @@ const InterestSelection = () => {
           ))}
         </div>
 
-        <div className="mt-8">
+        <div className="mt-7">
           {canProceed ? (
             <Link href="/greetings" className="px-40 py-4 bg-blue rounded-full flex justify-center items-center gap-2.5 hover:bg-red active:bg-red active:ring active:ring-yellow">
               <div className="text-center text-stone text-2xl font-medium tracking-wide font-['Poppins'] capitalize">

@@ -24,14 +24,7 @@ const GenreSelection = () => {
   }, [selectedGenres]);
 
   return (
-      <>
-        <Link to="/firstscreen" className="pt-3 flex items-center gap-1 ml-20 text-black text-xl font-medium font-poppins hover:text-red active:text-blue">
-          <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.1875 9H3.375M7.3125 4.5L2.8125 9L7.3125 13.5" stroke="#151515" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}/>
-          </svg>
-          Back
-        </Link>
-
+   <>
           <div className="-mt-5 text-center text-red text-7xl font-semibold font-poppins">
             Let&apos;s get to know you!
           </div>

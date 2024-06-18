@@ -17,9 +17,9 @@ const Discovering = () => {
       <div className="text-center text-black text-6xl font-semibold font-['Poppins'] mt-4">
         Discovering Books...
       </div>
-      <div className="relative flex items-center justify-center mt-72">
+      <div className="relative flex items-center justify-center mt-80">
         <div className="w-80 h-80 rounded-full border border-beige bg-beige bg-opacity-90 absolute animate-ping-slow"></div>
-        <div className="w-52 h-52 rounded-full border border-beige bg-beige absolute animate-ping-slow delay-700"></div>
+        <div className="w-52 h-52 rounded-full border border-beige bg-beige absolute animate-ping-slow delay-200"></div>
         <div className="w-36 h-36 flex items-center justify-center rounded-full border-4 border-blue bg-stone absolute">
         <svg
             width="64"

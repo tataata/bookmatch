@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'wouter';
+import HeaderWelcome from './HeaderWelcome';
 
 const LogIn = () => {
   const [email, setEmail] = useState('');
@@ -29,6 +30,10 @@ const validatePassword = (event) => {
 };
 
   return (
+    <>
+    <Link href="/welcome"></Link>
+      <HeaderWelcome />
+
     <div className="w-full h-screen flex items-center justify-center bg-stone">
       <div className="w-[760px] h-auto bg-white rounded-3xl border border-beige p-6 absolute top-[110px]">
       <div className="text-center mt-4 text-red text-4xl font-medium font-['Poppins']">Log In</div>
@@ -126,6 +131,7 @@ const validatePassword = (event) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

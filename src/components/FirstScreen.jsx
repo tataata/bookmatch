@@ -2,6 +2,7 @@ import { Link } from 'wouter';
 
 const FirstScreen = () => {
     return (
+<>
         <div className="bg-stone">
         <div className="flex justify-center">
         <img
@@ -34,6 +35,7 @@ const FirstScreen = () => {
     </div>
     </div>
     </div>
+    </>
     );
 };
 

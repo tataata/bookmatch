@@ -102,8 +102,8 @@ const BookAuthorSelection = () => {
                     <div className="text-black text-2xl font-semibold font-['Poppins'] mt-3 mb-2 text-left">Books</div>
                     <div className="grid grid-cols-5 gap-7">
                         {books.map((book) => (
-                            <div key={book.title} className={`flex flex-col items-center gap-2 ${selectedBooks.includes(book) ? 'ring-4 ring-yellow rounded-lg' : ''}`} onClick={() => handleBookClick(book)}>
-                                <div className={`w-36 h-40 ${book.coverImage} rounded`}></div>
+                            <div key={book.title} className={`flex flex-col items-center gap-2`} onClick={() => handleBookClick(book)}>
+                                <div className={`w-36 h-40 ${book.coverImage} rounded ${selectedBooks.includes(book) ? 'ring-4 ring-yellow rounded-lg' : ''}`} onClick={() => handleBookClick(book)}></div>
                                 <div className="text-center text-black text-base font-semibold font-['Poppins'] leading-tight mt-1 -mb-1 w-36">
                                     {book.title}
                                 </div>
@@ -114,7 +114,7 @@ const BookAuthorSelection = () => {
                         ))}
                     </div>
 
-                    <div className="mt-2 cursor-pointer flex justify-end">
+                    <div className="mt-3 cursor-pointer flex justify-end">
                         <Link href="/morebooks" className="text-blue flex items-center gap-1 text-lg font-medium font-['Poppins'] hover:text-red">
                             Show more
                             <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,19 +132,20 @@ const BookAuthorSelection = () => {
                 </div>
 
                 <div className="flex flex-col items-start">
-                    <div className="text-black text-2xl flex flex-col items-start font-semibold font-['Poppins'] mt-3 mb-3 text-left">Authors</div>
+                    <div className="text-black text-2xl flex flex-col items-start font-semibold font-['Poppins'] mt-2 mb-3 text-left">Authors</div>
                     <div className="grid grid-cols-6 gap-8">
                         {authors.map((author) => (
-                            <div key={author.name} className={`flex flex-col items-center gap-3 ${selectedAuthors.includes(author) ? 'ring-4 ring-yellow rounded-lg' : ''}`} onClick={() => handleAuthorClick(author)}>
-                                <div className={`w-28 h-28 ${author.authorImage} rounded-full`}></div>
+                            <div key={author.name} className={`flex flex-col items-center gap-3`} onClick={() => handleAuthorClick(author)}>
+                                <div className={`w-28 h-28 ${author.authorImage} rounded-full ${selectedAuthors.includes(author) ? 'ring-4 ring-yellow rounded-full' : ''}`} onClick={() => handleAuthorClick(author)}></div>
                                 <div className="w-28 text-center text-black text-base font-semibold font-['Poppins'] leading-tight">{author.name}</div>
                             </div>
                         ))}
                     </div>
                 </div>
+            </div>
 
-                <div className="mt-3 cursor-pointer flex justify-end">
-                    <Link href="/moreauthors" className="text-blue flex items-center gap-1 text-lg font-medium font-['Poppins'] hover:text-red">
+                <div className="w-full mt-3 cursor-pointer">
+                    <Link href="/moreauthors" className="text-blue flex items-center justify-end gap-1 text-lg font-medium font-['Poppins'] hover:text-red mr-[540px]">
                         Show more
                         <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_42_3302)">
@@ -158,7 +159,6 @@ const BookAuthorSelection = () => {
                         </svg>
                     </Link>
                 </div>
-            </div>
 
             <div className="mt-6 flex flex-col justify-center items-center">
                 {canProceed ? (

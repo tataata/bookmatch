@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import { Link } from 'wouter';
 
@@ -22,7 +21,7 @@ const Header = ({ type, logoSrc, logoAlt }) => {
           {type === 'menu' && (
             <>
               <Link href="/discover" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Discover</Link>
-              <Link href="/mylibrary" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">My Library</Link>
+              <Link href="/library" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">My Library</Link>
               <Link href="/search" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Search</Link>
             </>
           )}

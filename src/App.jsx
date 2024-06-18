@@ -1,7 +1,7 @@
 import { Route, Switch } from 'wouter';
-// import HeaderWelcome from "./components/HeaderWelcome";
-// import HeaderQuiz from "./components/HeaderQuiz";
-// import HeaderMenu from "./components/HeaderMenu";
+import HeaderWelcome from "./components/HeaderWelcome";
+import HeaderQuiz from "./components/HeaderQuiz";
+import HeaderMenu from "./components/HeaderMenu";
 import HowItWorks from './components/HowItWorks';
 import Pricing from './components/Pricing';
 import LogIn from './components/LogIn';
@@ -15,8 +15,10 @@ import Header from './components/Header';
 import GreetingsModal from './components/GreetingsModal';
 import Discovering from './components/Discovering';
 import BookSwipe from './components/BookSwipe';
+import BookInfo from './components/BookInfo';
 
 import './App.css'
+import MyLibrary from './components/MyLibrary';
 
 function App() {
 
@@ -28,17 +30,17 @@ function App() {
     <Switch>
       <Route path="/quiz">
         {/* Header for Quiz section */}
-        <Header type="quiz" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
+        <Header type="quiz" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" component={HeaderQuiz}/>
         <GenreSelection />
       </Route>
       <Route path="/menu">
         {/* Header for Menu section */}
-        <Header type="menu" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
-        <Pricing />
+        <Header type="menu" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" component={HeaderMenu}/>
+        <BookSwipe />
       </Route>
       <Route path="/">
         {/* Default Header for Welcome section */}
-        <Header type="welcome" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" />
+        <Header type="welcome" logoSrc="src/images/logo-book.png" logoAlt="BookMatch Logo" component={HeaderWelcome} />
         <FirstScreen />
       </Route>
     </Switch>
@@ -58,6 +60,8 @@ function App() {
         <Switch>
       <Route path="/discovering" component={Discovering} />
       <Route path="/bookswipe" component={BookSwipe} />
+      <Route path="/library" component={MyLibrary} />
+      <Route path="/bookinfo" component={BookInfo} />
     </Switch>
       </div>
     </main>
