@@ -3,7 +3,7 @@ const GreetingsModal  = () => {
     return (
         <>
         <div className="w-full h-screen flex items-center justify-center bg-stone">
-            <div className="w-[770px] h-[600px] absolute top-[190px] rounded-3xl border border-beige bg-white flex flex-col justify-center items-center gap-3">
+            <div className="w-[730px] h-[610px] absolute top-[175px] rounded-3xl border border-beige bg-white flex flex-col justify-center items-center gap-3">
 
             <div className="text-center text-rose-600 text-6xl font-semibold font-'Poppins' leading-10">
                  You&apos;re ready!

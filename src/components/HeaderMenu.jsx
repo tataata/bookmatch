@@ -11,7 +11,7 @@ const HeaderMenu = () => {
       </Link>
       </div>
 
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-10 mt-1">
         <div className="flex items-center gap-8">
         <Link href="/bookswipe" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Discover</Link>
         <Link href="/library" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">My Library</Link>

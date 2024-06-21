@@ -29,8 +29,8 @@ const validatePassword = (event) => {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-stone">
-      <div className="w-[760px] h-auto bg-white rounded-3xl border border-beige p-6 absolute top-[110px]">
-      <div className="text-center mt-4 text-red text-4xl font-medium font-['Poppins']">Sign Up</div>
+      <div className="w-[760px] h-auto bg-white rounded-3xl border border-beige p-6 absolute top-[100px]">
+      <div className="text-center mt-3 text-red text-4xl font-medium font-['Poppins']">Sign Up</div>
         <div className="text-center mt-5 mb-6">
           <span className="text-3xl font-regular font-['Poppins']">Welcome to </span>
           <span className="text-3xl font-semibold font-['Poppins']">BookMatch</span>
@@ -39,7 +39,7 @@ const validatePassword = (event) => {
 
         <form className="mx-32 space-y-4">
         <div className="mt-4 text-center">
-        <Link href="/genres" className="text-black flex items-center gap-1 text-base font-medium absolute top-[40px] right-[30px] font-['Poppins'] hover:text-red">
+        <Link href="/genres" className="text-black flex items-center gap-1 text-base font-medium absolute top-[36px] right-[30px] font-['Poppins'] hover:text-red">
           Skip
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_42_3302)">

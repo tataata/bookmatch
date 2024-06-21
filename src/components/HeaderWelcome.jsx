@@ -10,7 +10,7 @@ const HeaderWelcome = () => {
           <div className="text-center text-black text-lg font-semibold font-['Poppins']">BookMatch</div>
           </Link>
         </div>
-      <div className="flex items-center gap-12">
+      <div className="flex items-center gap-12 mt-1">
         <div className="flex items-center gap-8">
         <button className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">How it works</button>
         <button className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Pricing</button>

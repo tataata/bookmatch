@@ -25,14 +25,14 @@ const GenreSelection = () => {
 
   return (
    <>
-          <div className="-mt-5 text-center text-red text-7xl font-semibold font-poppins">
+          <div className=" mt-2 text-center text-red text-7xl font-semibold font-poppins">
             Let&apos;s get to know you!
           </div>
 
           <div className="mt-10 flex flex-col items-center gap-5 justify-center">
             <div className="text-black text-center text-4xl font-semibold font-poppins">
               Choose your favorite genres:
-            <div className="text-black text-2xl font-normal font-lora mt-4">
+            <div className="text-black text-2xl font-normal font-lora mt-4 mb-1">
               Pick at least 3 genres
           </div>
           </div>
@@ -55,7 +55,7 @@ const GenreSelection = () => {
             ))}
           </div>
 
-          <div className="mt-4">
+          <div className="mt-6">
             {canProceed ? (
               <Link href="/books-authors-selection" className="px-40 py-4 bg-blue rounded-full flex justify-center items-center gap-2.5 hover:bg-red active:bg-red active:ring active:ring-yellow">
                 <div className="text-center text-stone text-2xl font-medium tracking-wide font-['Poppins'] capitalize">

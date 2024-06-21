@@ -44,14 +44,14 @@ const related = [
         author: "George Orwell",
     },
     {
-        coverImage: "src/images/MockingbirdCover.webp", 
+        coverImage: "src/images/ToKillaMockingbirdCover.jpeg", 
         title: "To Kill a Mockingbird",
         author: "Harper Lee",
     },
     {
         coverImage: "src/images/HarryPotter.jpeg",
         title: "Harry Potter",
-        author: "George Orwell",
+        author: "J.K. Rowling",
     }
 ]
 

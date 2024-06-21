@@ -19,62 +19,93 @@ import './App.css'
 function App() {
 
   return (
+    <>
     <div className="App">
-    {/* Header for Welcome section */}
-    <Header type="menu" />
 
     <Switch>
-      <Route path="/quiz">
-        {/* Header for Quiz section */}
-        <Header type="quiz"/>
-        <GenreSelection />
-        {/* <BookAuthorSelection />
-        <InterestSelection />
-        <GreetingsModal /> */}
-      </Route>
-      <Route path="/menu">
-        {/* Header for Menu section */}
-        <Header type="menu"/>
-        <BookSwipe />
-        {/* <Discovering />
-        <BookInfo />
-        <Profile /> */}
-      </Route>
-      <Route path="/">
-        {/* Default Header for Welcome section */}
-        <Header type="welcome"/>
-        <FirstScreen />
-        {/* <WelcomeModal />
-        <LogIn />
-        <SignUp /> */}
-      </Route>
-    </Switch>
-  
-    <main>
-      <div>
-        <Route path="/firstscreen" component={FirstScreen} />
-        <Route path="/login" component={LogIn} />
-        <Route path="/signup" component={SignUp} />
-        <Route path="/welcomemodal" component={WelcomeModal} />
-        <Route path="/genres" component={GenreSelection} />
-        <Route path="/books-authors-selection" component={BookAuthorSelection} />
-        <Route path="/interests" component={InterestSelection} />
-        <Route path="/greetings" component={GreetingsModal} />
+        <Route path="/quiz">
+          <Header type="quiz"/>
+        </Route>
 
-        <Switch>
-        <Route path="/discovering" component={Discovering} />
-        <Route path="/bookswipe" component={BookSwipe} />
-        <Route path="/library" component={MyLibrary} />
-        <Route path="/bookinfo/:id" component={BookInfo} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/search" component={Search} />
+        <Route path="/menu">
+          <Header type="menu"/>
+          <BookSwipe />
+        </Route>
+
+        <Route path="/">
+          <Header type="welcome"/>
+          <FirstScreen />
+        </Route>
+
+        <Route path="/login">
+          <Header type="welcome"/>
+          <LogIn />
+        </Route>
+
+        <Route path="/signup">
+          <Header type="welcome"/>
+          <SignUp />
+        </Route>
+
+        <Route path="/welcomemodal">
+          <Header type="quiz"/>
+          <WelcomeModal />
+        </Route>
+                
+        <Route path="/genres">
+          <Header type="quiz"/>
+          <GenreSelection />
+        </Route>
+
+        <Route path="/books-authors-selection">
+          <Header type="quiz"/>
+          <BookAuthorSelection />
+        </Route>
+
+        <Route path="/interests">
+          <Header type="quiz"/>
+          <InterestSelection />
+        </Route>
+
+        <Route path="/greetings">
+          <Header type="quiz"/>
+          <GreetingsModal />
+        </Route>
+          
+        <Route path="/discovering">
+          <Header type="menu"/>
+          <Discovering />
+        </Route>
+
+        <Route path="/bookswipe">
+          <Header type="menu"/>
+          <BookSwipe />
+        </Route>
+
+        <Route path="/library">
+          <Header type="menu"/>
+          <MyLibrary />
+        </Route>
+
+        <Route path="/bookinfo/:id">
+          <Header type="menu"/>
+          <BookInfo />
+        </Route>
+
+        <Route path="/profile">
+            <Header type="menu"/>
+            <Profile />
+        </Route>
+
+        <Route path="/search">
+            <Header type="menu"/>
+            <Search />
+        </Route>
+              
       </Switch>
-      
       </div>
-    </main>
-
-    </div>
-  )
+       </>
+     )
 }
 
 export default App

@@ -1,110 +1,114 @@
 import { Link } from 'wouter';
 import { useState } from 'react';
 
+
 const MyLibrary = () => {
  
     const books = [
         {
             title: "The Great Gatsby",
             author: "F. Scott Fitzgerald",
-            coverImage: "src/images/GatsbyCover.webp"
+            coverImage: "src/images/GatsbyCover.webp",
+            id: "the_title_gatsby"
         },
         {
             title: "To Kill a Mockingbird",
             author: "Harper Lee",
-            coverImage: "src/images/GatsbyCover.webp"
+            coverImage: "src/images/ToKillaMockingbirdCover.jpeg",
+            id: "to_kill_a_mockingbird",
         },
         {
             title: "1984",
             author: "George Orwell",
-            coverImage: "src/images/GatsbyCover.webp"
+            coverImage: "src/images/1984Cover.webp"
         },
         {
             title: "Pride and Prejudice",
             author: "Jane Austen",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Catcher in the Rye",
-            author: "J.D. Salinger",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Hobbit",
-            author: "J.R.R. Tolkien",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "To the Lighthouse",
-            author: "Virginia Woolf",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "Moby-Dick",
-            author: "Herman Melville",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Odyssey",
-            author: "Homer",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Lord of the Rings",
-            author: "J.R.R. Tolkien",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "Crime and Punishment",
-            author: "Fyodor Dostoevsky",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Picture of Dorian Gray",
-            author: "Oscar Wilde",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "Jane Eyre",
-            author: "Charlotte Brontë",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Adventures of Huckleberry Finn",
-            author: "Mark Twain",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "The Scarlet Letter",
-            author: "Nathaniel Hawthorne",
-            coverImage: "src/images/GatsbyCover.webp"
-        },
-        {
-            title: "Don Quixote",
-            author: "Miguel de Cervantes",
-            coverImage: "src/images/GatsbyCover.webp"
+            coverImage: "src/images/PrejudiceCover.png"
         },
         {
             title: "War and Peace",
             author: "Leo Tolstoy",
-            coverImage: "src/images/GatsbyCover.webp"
+            coverImage: "src/images/WarandPeaceCover.png"
+        },
+        {
+            title: "The Huckleberry Finn",
+            author: "Mark Twain",
+            coverImage: "src/images/HuckleberryFinnCover.jpeg"
+        },
+        {
+            title: "To the Lighthouse",
+            author: "Virginia Woolf",
+            coverImage: "src/images/TotheLighthouseCover.png"
+        },
+        {
+            title: "The Picture of Dorian Gray",
+            author: "Oscar Wilde",
+            coverImage: "src/images/ThePictureofDorian GrayCover.jpeg"
+        },
+        {
+            title: "The Odyssey",
+            author: "Homer",
+            coverImage: "src/images/The OdysseyCover.jpeg"
+        },
+        {
+            title: "The Lord of the Rings",
+            author: "J.R.R. Tolkien",
+            coverImage: "src/images/TheLordOftheRingsCover.jpeg"
+        },
+        {
+            title: "Crime and Punishment",
+            author: "Fyodor Dostoevsky",
+            coverImage: "src/images/CrimeandPunishmentCover.jpeg"
+        },
+        {
+            title: "Moby-Dick",
+            author: "Herman Melville",
+            coverImage: "src/images/MobyDickCover.jpeg"
+        },
+        {
+            title: "Jane Eyre",
+            author: "Charlotte Brontë",
+            coverImage: "src/images/JaneEyreCover.jpeg"
         },
         {
             title: "The Brothers Karamazov",
             author: "Fyodor Dostoevsky",
-            coverImage: "src/images/GatsbyCover.webp"
+            coverImage: "src/images/TheBrothersKaramazovCover.webp"
+        },
+        {
+            title: "The Hobbit",
+            author: "J.R.R. Tolkien",
+            coverImage: "src/images/TheHobbitCover.jpeg"
+        },
+        {
+            title: "Don Quixote",
+            author: "Miguel de Cervantes",
+            coverImage: "src/images/Don QuixoteCover.jpeg"
+        },
+        {
+            title: "The Catcher in the Rye",
+            author: "J.D. Salinger",
+            coverImage: "src/images/TheCatcherInTheRyeCover.jpeg"
+        },
+        {
+            title: "Catch-22",
+            author:"Joseph Heller",
+            coverImage: "src/images/Catch22Cover.jpeg"
         },
     ];
 
+
     const recommendations = [
         {
-            coverImage: "src/images/GatsbyCover.webp",
+            coverImage: "src/images/TheScarletLetterCover.jpeg",
             match: 98,
-            title: "Future's Edge",
-            author: "Emily K. Brown",
-            tags: ["Science Fiction", "Dystopian"],
+            title: "The Scarlet Letter",
+            author: "Nathaniel Hawthorne",
+            tags: ["Fiction", "Historical"],
             reviews: 1234,
-            description: "A gripping science fiction novel set in a dystopian future. The story follows a group of rebels as they navigate a world ruled by an oppressive government and fight for their freedom..."
+            description: "A historical fiction novel set in 17th-century Puritan Boston. The story follows Hester Pryn as she navigates the consequences of her adultery and the judgment of her community. Themes of sin, guilt, and redemption are explored..."
         },
         {
             coverImage: "src/images/HarryPotter.jpeg",
@@ -116,7 +120,7 @@ const MyLibrary = () => {
             description: "A captivating fantasy series that follows the life of a young wizard, Harry Potter, as he attends Hogwarts School of Witchcraft and Wizardry. The series explores themes of friendship, courage, and the battle between good and evil..."
         },
         {
-            coverImage: "src/images/GatsbyCover.webp",
+            coverImage: "src/images/TheAlchemistCover.jpeg",
             match: 85,
             title: "The Alchemist",
             author: "Paulo Coelho",
@@ -128,46 +132,45 @@ const MyLibrary = () => {
 
     const mores = [
         {
-            title: "The Great Gatsby",
-            author: "F. Scott Fitzgerald",
-            coverImage: "bg-beige"
+            title: "The Chronicles of Narnia",
+            author: "C.S. Lewis",
+            coverImage: "src/images/TheChroniclesNarniaCover.webp"
         },
         {
-            title: "To Kill a Mockingbird",
-            author: "Harper Lee",
-            coverImage: "bg-beige"
+            title: "The Hunger Games",
+            author: "Suzanne Collins",
+            coverImage: "src/images/TheHungerGamesCover.jpeg",
         },
         {
-            title: "1984",
-            author: "George Orwell",
-            coverImage: "bg-beige"
+            title: "The Da Vinci Code",
+            author: "Dan Brown",
+            coverImage: "src/images/DaVinciCodeCover.webp",
         },
         {
-            title: "Pride and Prejudice",
-            author: "Jane Austen",
-            coverImage: "bg-beige"
+            title: "The Dragon Tattoo",
+            author: "Stieg Larsson",
+            coverImage: "src/images/TheDragonTattooCover.jpeg",
         },
         {
-            title: "The Catcher in the Rye",
-            author: "J.D. Salinger",
-            coverImage: "bg-beige"
+            title: "The Fault in Our Stars",
+            author: "John Green",
+            coverImage: "src/images/ TheFaultinOurStarsCover.jpeg",
         },
         {
-            title: "1984",
-            author: "George Orwell",
-            coverImage: "bg-beige"
+            title: "The Name of the Wind",
+            author: "Patrick Rothfuss",
+            coverImage: "src/images/TheNameOftheWindCover.jpeg",
         },
         {
-            title: "Pride and Prejudice",
-            author: "Jane Austen",
-            coverImage: "bg-beige"
+            title: "Mistborn",
+            author: "Brandon Sanderson",
+            coverImage: "src/images/MistbornCover.jpeg",
         },
         {
-            title: "The Catcher in the Rye",
-            author: "J.D. Salinger",
-            coverImage: "bg-beige"
+            title: "The Lord of the Rings",
+            author: "J.R.R. Tolkien",
+            coverImage: "src/images/TheLordOftheRingsCover.jpeg",
         },
-
     ];
 
     const [displayedBooks, setDisplayedBooks] = useState(14);
@@ -207,9 +210,9 @@ const MyLibrary = () => {
 
             <div className="grid grid-cols-7 gap-4">
                         {books.slice(0, displayedBooks).map((book, index) => (
-                        <Link key={index} to={`/bookinfo/${book.title}`}>
-                        <div className="w-[160px] flex-col justify-center items-center gap-3 flex mb-1">
-                        <img src={book.coverImage} className="w-[160px] h-[190px] rounded"/>
+                        <Link key={index} to={`/bookinfo/:${book.id}`}>
+                        <div className="w-[165px] flex-col justify-center items-center gap-3 flex mb-1">
+                        <img src={book.coverImage} className="w-[165px] h-[190px] rounded"/>
                 <div className="flex-col justify-center items-center flex">
                   <div className="text-center text-black text-base mb-o.5 font-semibold font-['Poppins'] leading-tight hover:text-red active:text-yellow"> &quot;{book.title}&quot;</div>
                   <div className="text-center text-black text-sm font-normal font-['Lora']">by {book.author}</div>
@@ -219,7 +222,7 @@ const MyLibrary = () => {
         ))}
       </div>
                 <button
-                    className="w-full mt-4 flex justify-center items-center text-center text-blue hover:text-red active:text-red text-2xl font-semibold font-['Poppins'] capitalize"
+                    className="w-full mt-4 flex justify-center items-center text-center text-blue hover:text-red active:text-red text-2xl font-medium font-['Poppins'] capitalize"
                     onClick={handleShowAllBooks}
                 >
                      {showAllButtonLabel}
@@ -228,12 +231,12 @@ const MyLibrary = () => {
   
   <div className="mx-[230px] mb-20">
         <div className="text-black text-left text-3xl font-semibold font-['Poppins'] capitalize mt-9">Recommended for You</div>
-        <div className="text-black text-opacity-50 text-xl mt-1 font-medium font-['Lora']">Based on your reading preferences</div>
+        <div className="tex</Link>t-black text-opacity-50 text-xl mt-1 font-medium font-['Lora']">Based on your reading preferences</div>
 
 
     <div className="justify-center items-center grid grid-cols-3 mt-5 gap-20">
         {recommendations.map((recommendation, index) => (
-            <Link key={index} to={`/bookinfo/${recommendation.title}`}>
+            <Link key={index} to={`/bookinfo/:id ${recommendation.title}`}>
                  <div className="flex-col justify-start items-start gap-2.5 flex relative">
                     <div className="flex flex-row gap-6 items-center">
                     <div className="justify-center items-center flex">
@@ -313,7 +316,7 @@ const MyLibrary = () => {
                         {mores.map((more) => (
                             <Link key={more.title} to={`/bookinfo/${more.title}`}>
                             <div className={`flex flex-col items-right justify-start gap-2`}>
-                                <div className={`w-[145px] h-[166px] ${more.coverImage} rounded`}></div>
+                            <img src={more.coverImage} className="w-[145px] h-[170px] rounded"></img>
                                 <div className="text-center text-black text-base font-semibold font-['Poppins'] leading-tight mt-1 -mb-1 w-[145px]  hover:text-red active:text-yellow">
                                     &quot;{more.title}&quot;
                                 </div>
@@ -325,8 +328,8 @@ const MyLibrary = () => {
                         ))}
                     </div>
 
-                    <div className="mt-3 cursor-pointer flex justify-end">
-                        <Link href="/morebooks" className="text-blue flex items-center gap-1 text-lg font-medium font-['Poppins'] hover:text-red">
+                    <div className="mt-2 cursor-pointer flex justify-end">
+                        <button className="text-blue flex items-center gap-1 text-lg font-medium font-['Poppins'] hover:text-red active:text-yellow">
                             Show more
                             <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clipPath="url(#clip0_42_3302)">
@@ -338,7 +341,7 @@ const MyLibrary = () => {
                                     </clipPath>
                                 </defs>
                             </svg>
-                        </Link>
+                        </button>
                     </div>
 
         </div>      

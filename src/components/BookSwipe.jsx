@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 const books = [
     {
         img: "src/images/GatsbyCover.webp",
@@ -45,7 +46,533 @@ const books = [
             language: "English",
             author: "George Orwell was an English novelist, essayist, and critic, best known for his novels Animal Farm and 1984. His works are known for their social and political themes...",
         },
-    }
+    },
+        {
+            img: "src/images/ToKillaMockingbirdCover.jpeg",
+            title: "To Kill a Mockingbird",
+            author: "Harper Lee",
+            match: "85%",
+            tags: ["Classic Fiction", "Racism", "Coming-of-Age"],
+            rating: 4,
+            reviews: 1897,
+            description: "To Kill a Mockingbird is a novel set in the 1930s in a small town in Alabama. It explores themes of racial injustice, innocence, and the loss of innocence...",
+            additionalDetails: {
+                pages: "336",
+                language: "English",
+                author: "Harper Lee was an American novelist, best known for her novel To Kill a Mockingbird. The book won the Pulitzer Prize and has become a classic of modern American literature...",
+            },
+        },
+        {
+            img: "src/images/PrejudiceCover.png",
+            title: "Pride and Prejudice",
+            author: "Jane Austen",
+            match: "90%",
+            tags: ["Classic Fiction", "Romance", "Social Commentary"],
+            rating: 5,
+            reviews: 2150,
+            description: "Pride and Prejudice is a novel set in 19th-century England. It follows the story of Elizabeth Bennet, a young woman from a lower-class family, and her complicated...",
+            additionalDetails: {
+                pages: "432",
+                language: "English",
+                author: "Jane Austen was an English novelist known for her witty social commentary and romantic novels. Pride and Prejudice is one of her most famous works...",
+            },
+        },
+        {
+            img: "src/images/TotheLighthouseCover.png",
+            title: "To the Lighthouse",
+            author: "Virginia Woolf",
+            match: "82%",
+            tags: ["Modern", "Stream of Consciousness", "Family"],
+            rating: 3,
+            reviews: 987,
+            description: "To the Lighthouse is a novel by Virginia Woolf. It is considered a pioneering work of modernist literature and is known for its stream-of-consciousness narrative...",
+            additionalDetails: {
+                pages: "209",
+                language: "English",
+                author: "Virginia Woolf was an English writer and one of the foremost modernists of the 20th century. Her works often explored themes of gender, sexuality, and identity...",
+            },
+        },
+        {
+            img: "src/images/Catch22Cover.jpeg",
+            title: "Catch-22",
+            author: "Joseph Heller",
+            match: "88%",
+            tags: ["Satire", "War", "Absurdism"],
+            rating: 3,
+            reviews: 1345,
+            description: "Catch-22 is a satirical novel set during World War II. It follows the story of Captain John Yossarian, a U.S. Army Air Forces bombardier, and his attempts to maintain his...",
+            additionalDetails: {
+                pages: "453",
+                language: "English",
+                author: "Joseph Heller was an American author known for his satirical novels. Catch-22 is considered his masterpiece and has become a classic of American literature...",
+            },
+        },
+        {
+            img: "src/images/TheHobbitCover.jpeg",
+            title: "The Hobbit",
+            author: "J.R.R. Tolkien",
+            match: "95%",
+            tags: ["Fantasy", "Adventure", "Quest"],
+            rating: 4.9,
+            reviews: 2568,
+            description: "The Hobbit is a fantasy novel written by J.R.R. Tolkien. It follows the story of Bilbo Baggins, a hobbit who is reluctantly swept into an epic quest to reclaim the...",
+            additionalDetails: {
+                pages: "310",
+                language: "English",
+                author: "J.R.R. Tolkien was an English writer, poet, and philologist. He is best known for his high fantasy works, including The Hobbit and The Lord of the Rings...",
+            },
+        },
+        {
+            img: "src/images/BraveNewWorldCover.jpeg",
+            title: "Brave New World",
+            author: "Aldous Huxley",
+            match: "80%",
+            tags: ["Dystopian", "Science Fiction", "Social Criticism"],
+            rating: 4,
+            reviews: 1123,
+            description: "Brave New World is a dystopian novel set in a futuristic society where people are genetically engineered and conditioned to be content with their assigned roles...",
+            additionalDetails: {
+                pages: "288",
+                language: "English",
+                author: "Aldous Huxley was an English writer and philosopher. Brave New World is one of his most famous works and is considered a classic of dystopian literature...",
+            },
+        },
+        {
+            img: "src/images/TheLordOftheRingsCover.jpeg",
+            title: "The Lord of the Rings",
+            author: "J.R.R. Tolkien",
+            match: "97%",
+            tags: ["Fantasy", "Adventure", "Epic"],
+            rating: 5,
+            reviews: 3987,
+            description: "The Lord of the Rings is a high fantasy novel written by J.R.R. Tolkien. It is set in the fictional world of Middle-earth and follows the quest of a group of...",
+            additionalDetails: {
+                pages: "1178",
+                language: "English",
+                author: "J.R.R. Tolkien was an English writer, poet, and philologist. The Lord of the Rings is his most famous work and has had a significant impact on the fantasy genre...",
+            },
+        },
+        {
+            img: "src/images/AnnaKareninaCover.jpeg",
+            title: "Anna Karenina",
+            author: "Leo Tolstoy",
+            match: "89%",
+            tags: ["Classic Fiction", "Romance", "Society"],
+            rating: 4,
+            reviews: 1765,
+            description: "Anna Karenina is a novel by Leo Tolstoy. It explores themes of love, infidelity, and the consequences of societal norms. The story follows the life of Anna...",
+            additionalDetails: {
+                pages: "864",
+                language: "English",
+                author: "Leo Tolstoy was a Russian writer considered one of the greatest authors of all time. Anna Karenina is one of his most famous works and is regarded as a...",
+            },
+        },
+        {
+            img: "src/images/TheCatcherInTheRyeCover.jpeg",
+            title: "The Catcher in the Rye",
+            author: "J.D. Salinger",
+            match: "86%",
+            tags: ["Coming-of-Age", "Alienation", "Identity"],
+            rating: 4,
+            reviews: 1456,
+            description: "The Catcher in the Rye is a novel by J.D. Salinger. It is narrated by Holden Caulfield, a teenager who is struggling with his identity and the hypocrisy...",
+            additionalDetails: {
+                pages: "277",
+                language: "English",
+                author: "J.D. Salinger was an American writer known for his reclusive lifestyle. The Catcher in the Rye is his most famous work and has become a classic of...",
+            },
+        },
+        {
+            img: "src/images/MobyDickCover.jpeg",
+            title: "Moby-Dick",
+            author: "Herman Melville",
+            match: "83%",
+            tags: ["Adventure", "Whaling", "Obsession"],
+            rating: 3,
+            reviews: 987,
+            description: "Moby-Dick is a novel by Herman Melville. It tells the story of Captain Ahab's obsessive quest for revenge against the white whale, Moby Dick. The novel...",
+            additionalDetails: {
+                pages: "635",
+                language: "English",
+                author: "Herman Melville was an American writer and sailor. Moby-Dick is his most famous work and is considered one of the greatest American novels...",
+            },
+        },
+        {
+            img: "src/images/HuckleberryFinnCover.jpeg",
+            title: "Huckleberry Finn",
+            author: "Mark Twain",
+            match: "88%",
+            tags: ["Adventure", "Coming-of-Age", "Satire"],
+            rating: 5,
+            reviews: 1345,
+            description: "The Adventures of Huckleberry Finn is a novel by Mark Twain. It follows the story of Huck Finn, a young boy who escapes his abusive father and embarks on...",
+            additionalDetails: {
+                pages: "366",
+                language: "English",
+                author: "Mark Twain was an American writer and humorist. The Adventures of Huckleberry Finn is considered one of his greatest works and is often called...",
+            },
+        },
+        {
+            img: "src/images/ThePictureofDorian GrayCover.jpeg",
+            title: "The Picture of Dorian Gray",
+            author: "Oscar Wilde",
+            match: "92%",
+            tags: ["Gothic Fiction", "Morality", "Art"],
+            rating: 5,
+            reviews: 2568,
+            description: "The Picture of Dorian Gray is a novel by Oscar Wilde. It tells the story of a young man named Dorian Gray who remains eternally youthful while a portrait...",
+            additionalDetails: {
+                pages: "254",
+                language: "English",
+                author: "Oscar Wilde was an Irish poet and playwright. The Picture of Dorian Gray is his only novel and is known for its exploration of aestheticism and...",
+            },
+        },
+        {
+            img: "src/images/Don QuixoteCover.jpeg",
+            title: "Don Quixote",
+            author: "Miguel de Cervantes",
+            match: "87%",
+            tags: ["Adventure", "Satire", "Chivalry"],
+            rating: 4,
+            reviews: 1765,
+            description: "Don Quixote is a novel by Miguel de Cervantes. It follows the adventures of a delusional knight-errant named Don Quixote and his loyal squire, Sancho Panza...",
+            additionalDetails: {
+                pages: "863",
+                language: "English",
+                author: "Miguel de Cervantes was a Spanish writer and one of the greatest novelists of all time. Don Quixote is his most famous work and is considered...",
+            },
+        },
+        {
+            img: "src/images/TheGrapesofWrathCover.png",
+            title: "The Grapes of Wrath",
+            author: "John Steinbeck",
+            match: "85%",
+            tags: ["Great Depression", "Social Justice", "Family"],
+            rating: 3,
+            reviews: 1567,
+            description: "The Grapes of Wrath is a novel by John Steinbeck. It tells the story of the Joad family, who are forced to leave their Oklahoma farm during the Great Depression...",
+            additionalDetails: {
+                pages: "464",
+                language: "English",
+                author: "John Steinbeck was an American writer and Nobel Prize winner. The Grapes of Wrath is one of his most famous works and is considered a classic of...",
+            },
+        },
+        {
+            img: "src/images/WutheringHeightsCover.png",
+            title: "Wuthering Heights",
+            author: "Emily Bronte",
+            match: "89%",
+            tags: ["Gothic Fiction", "Romance", "Revenge"],
+            rating: 4,
+            reviews: 1765,
+            description: "Wuthering Heights is a novel by Emily Bronte. It is a story of love, passion, and revenge set in the Yorkshire moors. The novel follows the intense...",
+            additionalDetails: {
+                pages: "416",
+                language: "English",
+                author: "Emily Bronte was an English novelist and poet. Wuthering Heights is her only novel and is considered a classic of English literature...",
+            },
+        },
+        {
+            img: "src/images/SherlockHolmes.png",
+            title: "Sherlock Holmes",
+            author: "Arthur Conan Doyle",
+            match: "93%",
+            tags: ["Mystery", "Detective", "Crime"],
+            rating: 5,
+            reviews: 2150,
+            description: "The Adventures of Sherlock Holmes is a collection of short stories featuring the famous detective Sherlock Holmes and his loyal friend, Dr. John Watson...",
+            additionalDetails: {
+                pages: "307",
+                language: "English",
+                author: "Arthur Conan Doyle was a British writer and physician. He is best known for his Sherlock Holmes stories, which have had a lasting impact on the...",
+            },
+        },
+        {
+            img: "src/images/FrankensteinCover.png",
+            title: "Frankenstein",
+            author: "Mary Shelley",
+            match: "87%",
+            tags: ["Gothic Fiction", "Science Fiction", "Morality"],
+            rating: 3,
+            reviews: 1897,
+            description: "Frankenstein is a novel by Mary Shelley. It tells the story of Victor Frankenstein, a young scientist who creates a grotesque creature in an unorthodox...",
+            additionalDetails: {
+                pages: "280",
+                language: "English",
+                author: "Mary Shelley was an English writer and novelist. Frankenstein is her most famous work and is considered a classic of Gothic and science fiction...",
+            },
+        },
+        {
+            img: "src/images/DraculaCover.png",
+            title: "Dracula",
+            author: "Bram Stoker",
+            match: "90%",
+            tags: ["Gothic Fiction", "Vampires", "Horror"],
+            rating: 4,
+            reviews: 1987,
+            description: "Dracula is a novel by Bram Stoker. It tells the story of Count Dracula, a vampire who moves from Transylvania to England in search of new blood...",
+            additionalDetails: {
+                pages: "418",
+                language: "English",
+                author: "Bram Stoker was an Irish author best known for his Gothic novel Dracula. The book has had a significant impact on the vampire genre and has...",
+            },
+        },
+        {
+            img: "src/images/TheScarletLetterCover.jpeg",
+            title: "The Scarlet Letter",
+            author: "Nathaniel Hawthorne",
+            match: "86%",
+            tags: ["Historical Fiction", "Puritanism", "Sin"],
+            rating: 4,
+            reviews: 1567,
+            description: "The Scarlet Letter is a novel by Nathaniel Hawthorne. It is set in 17th-century Puritan New England and follows the story of Hester Prynne, who...",
+            additionalDetails: {
+                pages: "279",
+                language: "English",
+                author: "Nathaniel Hawthorne was an American novelist and short story writer. The Scarlet Letter is his most famous work and is considered a...",
+            },
+        },
+        {
+            img: "src/images/TheCountofMonteCristoCover.jpeg",
+            title: "The Count of Monte Cristo",
+            author: "Alexandre Dumas",
+            match: "92%",
+            tags: ["Adventure", "Revenge", "Betrayal"],
+            rating: 3,
+            reviews: 2150,
+            description: "The Count of Monte Cristo is a novel by Alexandre Dumas. It tells the story of Edmond Dantes, a young sailor who is falsely accused of treason and...",
+            additionalDetails: {
+                pages: "1276",
+                language: "English",
+                author: "Alexandre Dumas was a French writer and one of the most widely read authors in the world. The Count of Monte Cristo is his most famous...",
+            },
+        },
+        {
+            img: "src/images/HeartofDarknessCover.png",
+            title: "Heart of Darkness",
+            author: "Joseph Conrad",
+            match: "89%",
+            tags: ["Modernist Literature", "Colonialism", "Psychological"],
+            rating: 3,
+            reviews: 1897,
+            description: "Heart of Darkness is a novella by Joseph Conrad. It explores themes of imperialism, racism, and the darkness of the human soul. The story follows...",
+            additionalDetails: {
+                pages: "96",
+                language: "English",
+                author: "Joseph Conrad was a Polish-British writer regarded as one of the greatest novelists in the English language. Heart of Darkness is one of his...",
+            },
+        },
+        {
+            img: "src/images/TheBrothersKaramazovCover.webp",
+            title: "The Brothers Karamazov",
+            author: "Fyodor Dostoevsky",
+            match: "87%",
+            tags: ["Philosophical", "Family", "Religion"],
+            rating: 4,
+            reviews: 1765,
+            description: "The Brothers Karamazov is a novel by Fyodor Dostoevsky. It explores themes of morality, faith, and the nature of evil. The story follows the lives...",
+            additionalDetails: {
+                pages: "796",
+                language: "English",
+                author: "Fyodor Dostoevsky was a Russian novelist, philosopher, and essayist. The Brothers Karamazov is his final and most famous novel...",
+            },
+        },
+        {
+            img: "src/images/GreatExpectations.png",
+            title: "Great Expectations",
+            author: "Charles Dickens",
+            match: "90%",
+            tags: ["Classic Fiction", "Coming-of-Age", "Social Class"],
+            rating: 4,
+            reviews: 1987,
+            description: "Great Expectations is a novel by Charles Dickens. It follows the story of Pip, an orphan who rises from humble beginnings to become a gentleman...",
+            additionalDetails: {
+                pages: "544",
+                language: "English",
+    },
+        },
+        {
+            img: "src/images/TheShiningCover.png",
+            title: "Alice's in Wonderland",
+            author: "Lewis Carroll",
+            match: "91%",
+            tags: ["Fantasy", "Children's Literature", "Imagination"],
+            rating: 5,
+            reviews: 1765,
+            description: "Alice's Adventures in Wonderland is a novel by Lewis Carroll. It follows the story of a young girl named Alice who falls down a rabbit hole into a...",
+            additionalDetails: {
+                pages: "200",
+                language: "English",
+                author: "Lewis Carroll was an English writer and mathematician. Alice's Adventures in Wonderland is his most famous work and is considered a...",
+            },
+        },
+        {
+            img: "src/images/TheShiningCover.jpeg",
+            title: "The Shining",
+            author: "Stephen King",
+            match: "93%",
+            tags: ["Horror", "Psychological Thriller", "Haunted Hotel"],
+            rating: 5,
+            reviews: 2150,
+            description: "The Shining is a horror novel by Stephen King. It tells the story of Jack Torrance, a writer and recovering alcoholic, who becomes the winter...",
+            additionalDetails: {
+                pages: "447",
+                language: "English",
+                author: "Stephen King is an American author known for his horror and supernatural fiction. The Shining is one of his most popular and...",
+            },
+        },
+        {
+            img: "src/images/TheCatcherInTheRyeCover.jpeg",
+            title: "The Catcher in the Rye",
+            author: "J.D. Salinger",
+            match: "86%",
+            tags: ["Coming-of-Age", "Alienation", "Identity"],
+            rating: 3,
+            reviews: 1456,
+            description: "The Catcher in the Rye is a novel by J.D. Salinger. It is narrated by Holden Caulfield, a teenager who is struggling with his identity...",
+            additionalDetails: {
+                pages: "277",
+                language: "English",
+                author: "J.D. Salinger was an American writer known for his reclusive lifestyle. The Catcher in the Rye is his most famous work and has...",
+            },
+        },
+            {
+            img: "src/images/TheGrapesofWrathCover.jpeg",
+            title: "The Grapes of Wrath",
+            author: "John Steinbeck",
+            match: "85%",
+            tags: ["Great Depression", "Social Justice", "Family"],
+            rating: 3,
+            reviews: 1567,
+            description: "The Grapes of Wrath is a novel by John Steinbeck. It tells the story of the Joad family, who are forced to leave their Oklahoma farm during the Great Depression...",
+            additionalDetails: {
+                pages: "464",
+                language: "English",
+                author: "John Steinbeck was an American writer and Nobel Prize winner. The Grapes of Wrath is one of his most famous works...",
+            },
+        },
+        {
+            img: "src/images/TheAlchemistCover.jpeg",
+            title: "The Alchemist",
+            author: "Paulo Coelho",
+            match: "95%",
+            tags: ["Philosophical", "Adventure", "Self-discovery"],
+            rating: 4,
+            reviews: 3000,
+            description: "The Alchemist is a novel by Paulo Coelho. It follows the journey of a young shepherd named Santiago as he sets out to discover his personal legend...",
+            additionalDetails: {
+                pages: "208",
+                language: "English",
+                author: "Paulo Coelho is a Brazilian author known for his spiritual and inspirational writings. The Alchemist is his most famous work...",
+            },
+        },
+        {
+            img: "src/images/100YearsOfSolitudeCover.png",
+            title: "100 Years of Solitude",
+            author: "Gabriel Garcia Marquez",
+            match: "94%",
+            tags: ["Realism", "Family Saga", "American Literature"],
+            rating: 5,
+            reviews: 2500,
+            description: "One Hundred Years of Solitude is a novel by Gabriel Garcia Marquez. It tells the story of the Buendia family and their experiences in the fictional town of Macondo...",
+            additionalDetails: {
+                pages: "417",
+                language: "English",
+                author: "Gabriel Garcia Marquez was a Colombian author and Nobel Prize winner. One Hundred Years of Solitude is considered his masterpiece...",
+            },
+        },
+        {
+            img: "src/images/TheNameOftheWindCover.jpeg",
+            title: "The Name of the Wind",
+            author: "Patrick Rothfuss",
+            match: "92%",
+            tags: ["Fantasy", "Magic", "Adventure"],
+            rating: 3,
+            reviews: 2800,
+            description: "The Name of the Wind is a fantasy novel by Patrick Rothfuss. It is the first book in the Kingkiller Chronicle series and follows the story of Kvothe, a legendary...",
+            additionalDetails: {
+                pages: "662",
+                language: "English",
+                author: "Patrick Rothfuss is an American writer and college lecturer. The Name of the Wind is his debut novel and has gained a large following...",
+            },
+        },
+        {
+            img: "src/images/TheKiteRunnerCover.jpeg",
+            title: "The Kite Runner",
+            author: "Khaled Hosseini",
+            match: "91%",
+            tags: ["Historical Fiction", "Friendship", "Redemption"],
+            rating: 4,
+            reviews: 3200,
+            description: "The Kite Runner is a novel by Khaled Hosseini. It tells the story of Amir, a young boy from Kabul, and his journey to seek redemption for past mistakes...",
+            additionalDetails: {
+                pages: "371",
+                language: "English",
+                author: "Khaled Hosseini is an Afghan-American novelist and physician. The Kite Runner is his debut novel and has been widely acclaimed...",
+            },
+        },
+        {
+            img: "src/images/The OdysseyCover.jpeg",
+            title: "The Odyssey",
+            author: "Homer",
+            match: "88%",
+            tags: ["Epic", "Greek Mythology", "Adventure"],
+            rating: 5,
+            reviews: 3500,
+            description: "The Odyssey is an epic poem attributed to Homer. It tells the story of Odysseus, a Greek hero, and his ten-year journey home from the Trojan War...",
+            additionalDetails: {
+                pages: "384",
+                language: "English",
+                author: "Homer is an ancient Greek poet and the author of the Iliad and the Odyssey. His works are considered foundational texts of Western literature...",
+            },
+        },
+        {
+            img: "src/images/CrimeandPunishmentCover.jpeg",
+            title: "Crime and Punishment",
+            author: "Fyodor Dostoevsky",
+            match: "87%",
+            tags: ["Philosophical", "Crime", "Redemption"],
+            rating: 4,
+            reviews: 2800,
+            description: "Crime and Punishment is a novel by Fyodor Dostoevsky. It tells the story of Rodion Raskolnikov, a young student who commits a crime...",
+            additionalDetails: {
+                pages: "671",
+                language: "English",
+                author: "Fyodor Dostoevsky was a Russian novelist and philosopher. Crime and Punishment is one of his most famous works...",    
+            },
+        },
+        {
+            img: "src/images/JaneEyreCover.jpeg",
+            title: "Jane Eyre",
+            author: "Charlotte Brontë",
+            match: "90%",
+            tags: ["Gothic Fiction", "Romance", "Feminism"],
+            rating: 5,
+            reviews: 3200,
+            description: "Jane Eyre is a novel by Charlotte Brontë. It follows the story of Jane Eyre, an orphaned governess, and her journey to independence and love...",
+            additionalDetails: {
+                pages: "624",
+                language: "English",
+                author: "Charlotte Brontë was an English novelist and poet. Jane Eyre is her best-known work and is considered a classic of English literature...",
+            },
+        },
+        {
+            img: "src/images/WarandPeaceCover.png",
+            title: "War and Peace",
+            author: "Leo Tolstoy",
+            match: "92%",
+            tags: ["Historical Fiction", "War", "Society"],
+            rating: 5,
+            reviews: 3200,
+            description: "War and Peace is a novel by Leo Tolstoy. It tells the story of five Russian aristocratic families during the Napoleonic Wars...",
+            additionalDetails: {
+                pages: "1225",
+                language: "English",
+                author: "Leo Tolstoy was a Russian writer considered one of the greatest authors of all time. War and Peace is one of his most famous works...",
+            },
+        }, 
+       
+
 ];
 
 const BookSwipe = () => {
@@ -54,6 +581,8 @@ const BookSwipe = () => {
     const [likedBooks, setLikedBooks] = useState([]);
     const [dislikedBooks, setDislikedBooks] = useState([]);
     const [library, setLibrary] = useState([]);
+    const [message, setMessage] = useState("");
+
 
     console.log(likedBooks);
     console.log(dislikedBooks);
@@ -66,6 +595,7 @@ const BookSwipe = () => {
         }));
     };
 
+    
     const handleButtonClick = (index) => {
         toggleExpand(index);
     };
@@ -74,13 +604,20 @@ const BookSwipe = () => {
         const currentBook = books[currentIndex];
         setLikedBooks([...likedBooks, currentBook]);
         setLibrary([...library, currentBook]);
+        showMessage("Like! The book is saved in your library");
         moveToNextBook();
     };
 
     const handleDislike = () => {
         const currentBook = books[currentIndex];
         setDislikedBooks([...dislikedBooks, currentBook]);
+        showMessage("Nope");
         moveToNextBook();
+    };
+
+    const showMessage = (text) => {
+        setMessage(text);
+        setTimeout(() => setMessage(""), 2000);
     };
 
     const moveToNextBook = () => {
@@ -133,7 +670,7 @@ const BookSwipe = () => {
                                     </div>
                                     <div className="text-black text-base font-regular font-['Poppins']">({book.reviews} reviews)</div>
                                 </div>
-                                <div className="px-3 text-black text-base font-normal font-['Lora'] leading-snug">
+                                <div className="px-3 text-black text-base font-normal text-center font-['Lora'] leading-snug">
                                     {book.description}
                                 </div>
 
@@ -183,7 +720,17 @@ const BookSwipe = () => {
                 ))}
             </div>
 
+
+
             <div className="flex flex-col gap-8 items-center justify-center absolute top-[465px] left-[315px]">
+
+                <div className="absolute right-[260px] top-[280px]">
+                        {message && (
+                            <div className="text-red font-['Poppins'] hidden font-bold text-4xl text-center w-[300px] ">
+                                {message}
+                            </div>
+                        )}
+                </div>
                 <button className="w-44 h-44 bg-blue rounded-full flex justify-center items-center hover:bg-yellow active:bg-yellow" onClick={handleDislike}>
                     <svg width="74" height="74" viewBox="0 0 24 24" fill="none" className="w-20 h-20 relative" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 20L4 4M20 4L4 20" stroke="#F7F4F3" strokeWidth="2" strokeLinecap="round"/>
@@ -195,6 +742,14 @@ const BookSwipe = () => {
             </div>
 
             <div className="flex flex-col gap-8 items-center justify-center absolute top-[465px] right-[315px]">
+
+                <div className="absolute right-[260px] top-[280px]">
+                        {message && (
+                            <div className="text-red font-['Poppins'] hidden font-bold text-4xl text-center w-[300px]">
+                                {message}
+                            </div>
+                        )}
+                </div>
                 <button className="w-44 h-44 bg-red rounded-full flex items-center justify-center hover:bg-yellow active:bg-yellow" onClick={handleLike}>
                     <svg width="74" height="72" viewBox="0 0 22 20" fill="none" className="w-22 h-20 relative" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_42_3060)">
@@ -207,6 +762,7 @@ const BookSwipe = () => {
                         </defs>
                     </svg>
                 </button>
+
                 <svg width="74" height="74" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_42_3302)">
                         <path d="M2.8125 9H14.625M10.6875 13.5L15.1875 9L10.6875 4.5" stroke="#DED2CE" strokeLinecap="round" strokeLinejoin="round"/>
@@ -224,4 +780,5 @@ const BookSwipe = () => {
 };
 
 export default BookSwipe;
+
 

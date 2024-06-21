@@ -11,7 +11,7 @@ const HeaderQuiz = () => {
           </Link>
         </div>
 
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-10 mt-1">
         <div className="flex items-center gap-8">
         <Link href="/how-it-works" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">How it works</Link>
         <Link href="/pricing" className="text-black text-xl font-semibold font-['Poppins'] hover:text-red active:text-blue">Pricing</Link>

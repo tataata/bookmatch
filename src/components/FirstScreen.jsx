@@ -6,13 +6,13 @@ const FirstScreen = () => {
         <div className="bg-stone">
         <div className="flex justify-center">
         <img
-        className="absolute top-[60px] w-56 h-64"
+        className="absolute top-[50px] w-56 h-64"
         src="src/images/Books-Illustration.png"
         alt="Placeholder"
       />
       </div>
     
-    <div className="flex flex-col items-center gap-10 absolute top-[320px] left-0 right-0">
+    <div className="flex flex-col items-center gap-10 absolute top-[315px] left-0 right-0">
       <div className="text-center text-black text-4xl font-medium font-['Lora']">
         Discover your next favorite book
       </div>
